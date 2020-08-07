@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --clock-size:28rem;
+    --hour-rot:0;
+    --minute-rot:15;
+    --second-rot:30;
+}
+
+body{
+    background: linear-gradient(to right,rgb(36, 3, 143),rgb(235, 99, 8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock{
+    width: var(--clock-size);
+    height: var(--clock-size);
+    background-color:rgba(169, 255, 248, 0.733);
+    margin: auto;
+    margin-top: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 50%;
+    position: relative;
+    border: 4px solid black;
+    font-size: 20px;
+}
+
+.num{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.num1{transform: rotate(30deg);}
+.num2{transform: rotate(60deg);}
+.num3{transform: rotate(90deg);}
+.num4{transform: rotate(120deg);}
+.num5{transform: rotate(150deg);}
+.num6{transform: rotate(180deg);}
+.num7{transform: rotate(210deg);}
+.num8{transform: rotate(240deg);}
+.num9{transform: rotate(270deg);}
+.num10{transform: rotate(300deg);}
+.num11{transform: rotate(330deg);}
+
+.h{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.hand{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: black;
+    border-radius: 20%;
+    transform-origin: top;
+}
+#center{
+    background-color: black;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    transform: translate(-8px,-8px);
+}
+#hour{
+    height: calc(var(--clock-size)*0.25);
+    width: 10px;
+    transform: translate(-5px) rotate(calc((180 + var(--hour-rot))*1deg));
+}
+#minute{
+    height: calc(var(--clock-size)*0.33);
+    width: 6px;
+    transform: translate(-3px) rotate(calc((180 + var(--minute-rot))*1deg));
+}
+#second{
+    background-color: red;
+    height: calc(var(--clock-size)*0.41);
+    width: 3px;
+    transform: translate(-1.5px) rotate(calc((180 + var(--second-rot))*1deg));
+}
+
+#digital{
+    display: flex;
+    flex-direction: row;
+}
+
+.d{
+    width: 20rem;
+    height: 1.5rem;
+    margin-top: 60px;
+    background-color:rgba(169, 255, 248, 0.733);
+    border: 4px solid black;
+    border-radius: 6px;
+    margin-right: 6px;
+    font-size : 22px;
+    text-align: center; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 22px;
+}
